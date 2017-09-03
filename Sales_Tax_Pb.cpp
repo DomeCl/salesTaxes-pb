@@ -10,7 +10,6 @@
 
 #define iter 3   // Number of selected rows for tesing
 
-
 using namespace std;
 
 struct shop
@@ -36,31 +35,26 @@ int numOfLines = 0;
 // select random line from table and store data in vectors
 if (file.is_open())
 {
-
-string a[9]=" "; 
-int b[9]={};
-double c[9]={};
-int d[9]={};
-srand(time(NULL));
-for (int j=0; j<iter; j++)
-{
-	file.clear();
-	file.seekg(0, ios::beg);
-	
-	for (int g=0; g<9; g++)
+	string a[9]=" "; 
+	int b[9]={};
+	double c[9]={};
+	int d[9]={};
+	srand(time(NULL));
+	for (int j=0; j<iter; j++)
 	{
-		file>>a[g]>>b[g]>>c[g]>>d[g];
+		file.clear();
+		file.seekg(0, ios::beg);
+		for (int g=0; g<9; g++)
+		{
+			file>>a[g]>>b[g]>>c[g]>>d[g];
+		}
+		random = rand() % 9;
+
+		test[j]={a[random], b[random], c[random], d[random]};  // fill the shop basket
 	}
-	
-	random = rand() % 9;
-	
-	test[j]={a[random], b[random], c[random], d[random]};  // fill the shop basket
-	
-}
+	define_tax(test,3);  // print receipt
 
-define_tax(test,3);  // print receipt
-
-file.close();
+	file.close();
 }
 else cout << "Unable to open file"; 
 
