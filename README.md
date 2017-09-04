@@ -13,7 +13,7 @@ The input data, contained in the text file _data.txt_, are organized in a table 
 Given such input data, the program randomly selects three lines and these will be the inputs for the program.
 Each product is the object of the 'shop' structure:
 
-'''''''
+'''
 struct shop
 {
 	string goods; // kind of goods 
@@ -21,7 +21,7 @@ struct shop
 	double price; // shelf price
 	int import; // it is 1 if the object is imported, 0 otherwise
 };
-'''''''
+'''
 
 This object is input for the function 'define_tax' that, depending on product characteristics, calculates 
 the taxes to which it is subject. In the same function, the receipt details are printed.
