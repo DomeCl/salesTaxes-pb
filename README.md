@@ -7,7 +7,7 @@ The input data, contained in the text file _data.txt_, are organized in a table 
 `product name` (i.e. `book`, `bottle_of_parfume`),
 `product type` (the variable is 1 if `name` is book, food or medical product, 0 otherwise),
 `price`,
-`import variable` (it is 1 if the product is imported, 0 otherwise).
+`logic variable` (it is 1 if the product is imported, 0 otherwise).
 
 ## Code
 Given such input data, the program randomly selects three lines and these will be the inputs for the program.
